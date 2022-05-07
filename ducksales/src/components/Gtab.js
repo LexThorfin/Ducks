@@ -1,6 +1,12 @@
 import React from "react";
 import Table from "@mui/material/Table";
-import {TableContainer, TableBody, TableCell, TableHead, TableRow,} from "@mui/material";
+import {
+    TableContainer, 
+    TableBody, 
+    TableCell, 
+    TableHead, 
+    TableRow,
+} from "@mui/material";
 
 export default function Gtab(props) {
     return (
@@ -22,7 +28,37 @@ export default function Gtab(props) {
                         </li>
                     );
                 })}
-            </ul> ) : null}
+            </ul>
+            ) : null}
+            {props.Data && props.Data.detail ? (
+                <TableContainer style={{ maxHeight: props.Height }}>
+                    <Table style={{ width: props.Width }} stickyHeader>
+                        <TableHead key={props.tableHead + "TableHead"}>
+                            <TableRow key={"01TableHeadRow"}>
+                                {props.Data.TableHead.map((header) => {
+                                    return <TableCell key={head}>{head.toUpperCase()}</TableCell>;
+                                })}
+                            </TableRow>
+                        </TableHead>
+                        <TableBody key={props.TName + "TableBody"}>
+                            {props.Data.detail
+                            ? props.Data.detail.map((dtl, idx) => {
+                                return (
+                                    <TableRow key={props.TName + idx + "TableRow"}>
+                                        {Object.keys(dtl).map((key) => {
+                                            return (
+                                            <TableCell key={key + dtl[key]}>
+                                                {dtl[key]}
+                                            </TableCell>
+                                            );
+                                        })}
+                                    </TableRow>
+                                );
+                            }): null}
+                        </TableBody>
+                    </Table>
+                </TableContainer>
+            ): null}
         </>
-    )
+    );
 }

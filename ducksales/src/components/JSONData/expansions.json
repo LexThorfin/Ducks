@@ -1,0 +1,26 @@
+[
+    {
+        "name": "DuckEggs",
+        "header": "DuckEggs",
+        "subheader": "Fresh Duck Eggs from free range ducks",
+        "content": ""
+    },
+    {
+        "name": "FertilizedDuckEggs",
+        "header" : "Fertilized Duck Eggs",
+        "subheader": "Incubated for 10 days confirmed alive at that time",
+        "content": ""
+    },
+    {
+        "name": "DuckHatchlings",
+        "header": "Duck Hatchlings",
+        "subheader" : "Mostly Hybrid ducks from our variety of ducks",
+        "content" : ""
+    },
+    {
+        "name": "GeeseEggs",
+        "header": "Geese Eggs",
+        "subheader": "Very dependent on supplies",
+        "content": "Availability To Be Determined, Just getting hatchlings 20220507"
+    }
+]

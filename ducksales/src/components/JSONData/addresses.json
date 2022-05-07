@@ -1,0 +1,5 @@
+{
+    "getDuckEggAvailability" : "https://localhost:5001/DuckAPI/Ducks/DuckAvailability",
+    "getDuckFertilizedEgg" : "https://localhost:5001/DuckAPI/Ducks/DuckFertilizedEgg",
+    "getDuckHatchlingAvail": "https://localhost:5001/DuckAPI/Ducks/DuckHatchAvail"
+}
