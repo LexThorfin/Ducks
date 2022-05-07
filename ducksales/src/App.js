@@ -1,5 +1,5 @@
-import './App.css';
-import {useState } from "react";
+import "./App.css";
+import { useState } from "react";
 import Accordion from "@mui/material/Accordion";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
@@ -30,7 +30,7 @@ export default function App(props) {
         </Typography>
       </>
     );
-  }
+  };
 
   return (
     <div className="App">
@@ -38,29 +38,29 @@ export default function App(props) {
         <h1>FOJSAN Duck Eggs</h1>
       </header>
       <body>
-{expand.map((exp) => {
-  return (
-    <Accordion
-      key={exp.name + "A"}
-      style={{ width: 1100 }}
-      expanded={panelOpen.event === exp.name ? true : false}
-    >
-      <AccordionSummary
-        key={exp.name + "Summary"}
-        expandIcon={
-          <ExpandMoreIcon onClick={() => hPanelClick(exp.name)} />
-        }
-        aria-controls="panel1bh-content"
-        id="panel1bh-header"
-      >
-        {Exp_Headings(exp.name, exp.header, exp.subheader)}
-      </AccordionSummary>
-      <AccordionDetails key = {exp.name + "DT"}>
-        <Typography>{exp.content}</Typography>
-      </AccordionDetails>
-    </Accordion>
-  );
-})}
+        {expand.map((exp) => {
+          return (
+            <Accordion
+              key={exp.name + "A"}
+              style={{ width: 1100 }}
+              expanded={panelOpen.event === exp.name ? true : false}
+            >
+              <AccordionSummary
+                key={exp.name + "Summary"}
+                expandIcon={
+                  <ExpandMoreIcon onClick={() => hPanelClick(exp.name)} />
+                }
+                aria-controls="panel1bh-content"
+                id="panel1bh-header"
+              >
+                {Exp_Headings(exp.name, exp.header, exp.subheader)}
+              </AccordionSummary>
+              <AccordionDetails key={exp.name + "DT"}>
+                <Typography>{exp.content}</Typography>
+              </AccordionDetails>
+            </Accordion>
+          );
+        })}
       </body>
     </div>
   );
